@@ -14,7 +14,7 @@ function Users() {
   // Fetch Users
   useEffect(() => {
     axios
-      .get("http://localhost:8995/api/users")
+      .get("https://restapi-3-yfd7.onrender.com/api/users")
       .then((res) => {
         setAllUsers(res.data);
       })
@@ -32,7 +32,7 @@ function Users() {
 
     try {
       await axios.delete(
-        `http://localhost:8995/api/delete/user/${delid}`
+        `https://restapi-3-yfd7.onrender.com/api/delete/user/${delid}`
       );
       setAllUsers(allusers.filter((user) => user._id !== delid));
       alert("User deleted successfully");
@@ -61,7 +61,7 @@ function Users() {
   const saveUpdate = async (id) => {
     try {
       const res = await axios.put(
-        `http://localhost:8995/api/update/user/${id}`,
+        `https://restapi-3-yfd7.onrender.com/api/update/user/${id}`,
         editData
       );
 
