@@ -1,5 +1,6 @@
 import axios from "axios"
 import { useState } from 'react'
+import "./AddUser.css";
 function AddUser() {
     const users={
         name:"",
